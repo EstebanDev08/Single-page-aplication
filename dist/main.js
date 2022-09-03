@@ -1,0 +1,1 @@
+(()=>{console.log("Hello webpack!");const[o,l]=[1,2]})();
