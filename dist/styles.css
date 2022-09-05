@@ -1,18 +1,22 @@
 /* variables */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Karla:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Karla:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
 
 
 :root {
 
     --principal: #85F238;
+    --secundario: #E71FF2;
+    --terciario: #50bcf2;
     --icons-color: #ffffff;
     --black: #000;
     --grey: #747474;
+    --text-color: #333333;
     --sm: 1.4rem;
     --md: 1.6rem;
     --lg: 1.8rem;
-    --tittles: 'Karla', sans-serif;
+    --tittles: 'space mono', monospace;
+    ;
     --text: 'IBM Plex Sans', sans-serif;
 
 
@@ -42,17 +46,40 @@ body {
 }
 
 h2 {
-    color: var(--black);
+    color: var(--text-color);
     font-size: var(--lg);
     font-family: var(--tittles);
     font-weight: 700;
 
+
 }
 
-a {
-    display: block;
+
+
+
+#content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
 }
 
+.button-principal {
+    width: 120px;
+    padding: 4px;
+
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    background-color: #50bcf2;
+    box-shadow: 9px 9px 0px #E71FF2;
+
+    border-radius: 8px 0;
+    text-align: center;
+    margin: auto;
+
+    font-size: 1.8rem;
+}
 
 
 
@@ -62,7 +89,7 @@ header {
     margin-bottom: 24px;
     padding: 0 12px;
 
-    height: 80px;
+    height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,6 +128,7 @@ header {
     display: grid;
     justify-items: center;
 
+    width: 100%;
     margin: 12px;
 
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -138,7 +166,7 @@ header {
 .Characters .Character-item div {
     position: absolute;
     bottom: 3px;
-
+    padding: 0 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,58 +174,201 @@ header {
     width: 100%;
     height: 3.4rem;
 
-    background-color: #90ee4dd5;
+    background-color: var(--terciario);
+
+
+
 }
+
+.Characters .Character-item div h2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+
+}
+
+
+
+
 
 /* character page */
 
 .Characters-inner {
+
+    position: relative;
+
     width: 100%;
-    height: calc(100vh - 80px - 24px - 24px);
+    max-width: 800px;
+
     display: flex;
     flex-direction: column;
 
     padding: 0 12px;
+    margin: 12px;
+
+
+    border-radius: 18px 0;
+    box-shadow: 0px 0px 7px 0px var(--grey);
 
 }
 
 .Character-card {
 
+    position: relative;
     width: 100%;
-    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
     margin-top: 36px;
-    margin-bottom: 24px;
+
+
+    border-bottom: 1px solid var(--grey);
+
 }
 
 .Character-card div {
-    position: relative;
-    top: 20px;
-    left: calc(100% - 80%);
-    background-color: #85F238;
-    width: 60%;
-    height: 40px;
+
+
+    position: absolute;
+    top: -55px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+    min-height: 40px;
+    min-width: 170px;
+    max-width: 84%;
+
+    background-color: #50BCF2;
+
+    border-radius: 18px 0;
+
+    box-shadow: 0px 0px 7px 0px var(--grey);
+
+
 }
 
 .Character-card h2 {
+
     text-align: center;
 
     font-size: 2.4rem;
+    font-weight: 700;
+
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
 }
+
+
+
 
 .Character-card img {
     width: 100%;
-    border-radius: 16px;
+    max-width: 500px;
+    border-radius: 8px;
+    margin-bottom: 24px;
 }
 
 .Character-info {
     width: 100%;
+    margin-top: 24px;
+    margin-bottom: 48px;
 }
 
 .Character-info h3 {
-    fon
+
+    margin-bottom: 6px;
+
+    font-size: var(--lg);
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+
+
+
 }
 
+.Character-info h3 span:nth-child(2) {
+
+    font-size: var(--lg);
+    font-weight: 500;
+    color: rgb(56, 56, 56);
+
+}
+
+.character-button {
+
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 60px);
+    margin: 0 auto;
+
+
+
+
+}
+
+
+
+
 /*Error404 Page */
+.error404-content {
+    padding: 0 12px;
+    width: 100%;
+
+    display: grid;
+
+
+}
+
+.error404-img h2 {
+    font-weight: 700;
+    font-size: 2.8rem;
+
+}
+
+.error404-img img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.error404-info {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.error404-info h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+
+
+    color: #333333;
+    margin-bottom: 28px;
+
+    text-shadow: 2px 1px 0px #50bcf2;
+    ;
+}
+
 
 
 
@@ -205,9 +376,12 @@ header {
 
 footer {
     position: fixed;
+    bottom: 0;
 
     height: 24px;
     width: 100%;
+
+
     display: flex;
     justify-content: center;
     align-items: center;
