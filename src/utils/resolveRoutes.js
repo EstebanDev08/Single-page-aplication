@@ -5,7 +5,7 @@ const resolveRoutes = (route) => {
         return validRoute
     }
 
-    return route;
+    return `/${route}`;
 }
 
 export default resolveRoutes

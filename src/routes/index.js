@@ -26,9 +26,8 @@ const router = async () => {
 
     let render = routes[route] ? routes[route] : Error404;
 
-    console.log(route)
-    console.log(routes[route])
-    console.log(render)
+    console.log(hash)
+
 
     content.innerHTML = await render();
 

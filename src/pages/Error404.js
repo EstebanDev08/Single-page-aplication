@@ -1,12 +1,12 @@
 const Character = () => {
-    const view = /*html*/ `
+const view = /*html*/ `
 
-<div class="Characters-innner">
-    <h2> error 404</h2>
+<div class="error404">
+    <img src="https://image.ibb.co/fyxspF/rick.png" alt="rick sanchez">
 </div>
 
 `;
-    return view
+return view
 
 };
 
