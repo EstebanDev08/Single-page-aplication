@@ -8,6 +8,7 @@
     --principal: #85F238;
     --icons-color: #ffffff;
     --black: #000;
+    --grey: #747474;
     --sm: 1.4rem;
     --md: 1.6rem;
     --lg: 1.8rem;
@@ -21,7 +22,8 @@
 
 html {
     font-size: 62.5%;
-    min-width: 120px;
+    min-width: 320px;
+    background-color: #ecf5e7;
 }
 
 * {
@@ -44,22 +46,20 @@ h2 {
     font-size: var(--lg);
     font-family: var(--tittles);
     font-weight: 700;
+
 }
 
 a {
     display: block;
 }
 
-/*icons color*/
-path {
-    fill: var(--icons-color);
-}
+
 
 
 /*header page*/
 
 header {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
     padding: 0 12px;
 
     height: 80px;
@@ -68,7 +68,7 @@ header {
     align-items: center;
 
     background-color: var(--principal);
-    box-shadow: 2px -1px 13px 0px;
+    box-shadow: 2px -1px 13px 0px var(--grey);
 
 }
 
@@ -89,8 +89,8 @@ header {
 
 .search-icon {
 
-    height: 32px;
-    width: 32px;
+    height: 36px;
+    width: 36px;
 
 }
 
@@ -103,17 +103,15 @@ header {
 
     margin: 12px;
 
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 12px;
 }
 
 .Characters .Character-item {
-    min-width: 220px;
+    min-width: 240px;
     width: 100%;
     max-width: 400px;
 
-
-    border-radius: 16px;
 
 
 }
@@ -127,6 +125,11 @@ header {
 .Characters .Character-item img {
     width: 100%;
     object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.Characters .Character-item img:hover {
+    box-shadow: 0px 0px 7px 0px var(--grey);
 
 }
 
@@ -136,10 +139,81 @@ header {
     position: absolute;
     bottom: 3px;
 
-    width: 100%;
-    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    width: 100%;
+    height: 3.4rem;
+
+    background-color: #90ee4dd5;
+}
+
+/* character page */
+
+.Characters-inner {
+    width: 100%;
+    height: calc(100vh - 80px - 24px - 24px);
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 12px;
+
+}
+
+.Character-card {
+
+    width: 100%;
+    align-self: center;
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+
+.Character-card div {
+    position: relative;
+    top: 20px;
+    left: calc(100% - 80%);
     background-color: #85F238;
+    width: 60%;
+    height: 40px;
+}
+
+.Character-card h2 {
+    text-align: center;
+
+    font-size: 2.4rem;
+}
+
+.Character-card img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.Character-info {
+    width: 100%;
+}
+
+.Character-info h3 {
+    fon
 }
 
 /*Error404 Page */
+
+
+
+/*footer*/
+
+footer {
+    position: fixed;
+
+    height: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--principal);
+
+    font-size: var(--md);
+
+}
