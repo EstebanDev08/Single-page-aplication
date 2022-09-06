@@ -132,7 +132,7 @@ header {
     margin: 12px;
 
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 12px;
+    gap: 36px;
 }
 
 .Characters .Character-item {
@@ -376,8 +376,8 @@ header {
 /*footer*/
 
 footer {
-    position: fixed;
-    bottom: 0;
+
+
 
     height: 24px;
     width: 100%;

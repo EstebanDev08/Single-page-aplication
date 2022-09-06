@@ -16,6 +16,7 @@ const routes = {
 const router = async () => {
     const header = null || document.getElementById("header");
     const content = null || document.getElementById("content")
+    const character = null || document.getElementById("character")
 
     header.innerHTML = await Header();
 
@@ -29,7 +30,21 @@ const router = async () => {
     console.log(hash)
 
 
-    content.innerHTML = await render();
+
+
+    console.log(character)
+
+
+    if (route === "/") {
+        content.innerHTML = `<div class="Characters" id="character"></div>`
+        character.innerHTML = await render();
+
+    } else {
+        content.innerHTML = await render();
+
+    }
+
+
 
 };
 
