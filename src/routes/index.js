@@ -1,5 +1,5 @@
 import Header from '../tamplate/Header'
-import Home from '../pages/Home'
+import { Home, observerScroll } from '../pages/Home'
 import Character from '../pages/Character'
 import Error404 from '../pages/Error404'
 import getHash from '../utils/getHash'
@@ -13,7 +13,16 @@ const routes = {
 
 };
 
+
+
+
 const router = async () => {
+
+
+
+
+
+
     const header = null || document.getElementById("header");
     const content = null || document.getElementById("content")
     const character = null || document.getElementById("character")
@@ -32,17 +41,18 @@ const router = async () => {
 
 
 
-    console.log(character)
-
-
     if (route === "/") {
         content.innerHTML = `<div class="Characters" id="character"></div>`
-        character.innerHTML = await render();
+
+        await render();
+
 
     } else {
+
         content.innerHTML = await render();
 
     }
+
 
 
 

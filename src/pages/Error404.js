@@ -1,5 +1,5 @@
 const Character = () => {
-const view = /*html*/ `
+    const view = /*html*/ `
 
 <div class="error404-content">
 
@@ -18,7 +18,10 @@ const view = /*html*/ `
 </div>
 
 `;
-return view
+
+
+
+    return view
 
 };
 
