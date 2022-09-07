@@ -25,7 +25,7 @@ const Character = async () => {
        <div class="info-container">
             <h3><span>Episodes:</span> <span>${character.episode.length}</span></h3>
             <h3><span>Status:</span> <span>${character.status}</span></h3>
-            <h3><span>Species:</span> <span>${character.spacies}</span></h3>
+            <h3><span>Species:</span> <span>${character.species}</span></h3>
             <h3><span>Gender:</span> <span>${character.gender}</span></h3>
             <h3><span>Origin:</span> <span>${character.origin.name}</span></h3>
             <h3><span>Last location:</span> <span>${character.location.name}</span></h3>
