@@ -60,7 +60,7 @@ h2 {
 #content {
     display: flex;
     justify-content: center;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
 }
 
 .button-principal {
@@ -231,6 +231,20 @@ header {
 
 }
 
+.Character-card .character-name {
+    text-align: center;
+
+    font-size: 2.4rem;
+    font-weight: 700;
+
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+}
+
 .Character-card div {
 
 
@@ -256,22 +270,6 @@ header {
 
 }
 
-.Character-card h2 {
-
-    text-align: center;
-
-    font-size: 2.4rem;
-    font-weight: 700;
-
-
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    overflow: hidden;
-}
-
-
 
 
 .Character-card img {
@@ -283,9 +281,30 @@ header {
 
 .Character-info {
     width: 100%;
-    margin-top: 24px;
+
     margin-bottom: 48px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.Character-info h2 {
+
+    text-align: center;
+
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    margin-bottom: 24px;
+
+}
+
+.Character-info .info-container {
+    width: 100%;
+    max-width: 500px;
+}
+
 
 .Character-info h3 {
 
@@ -391,4 +410,94 @@ footer {
 
     font-size: var(--md);
 
+}
+
+@media (min-width: 820px) {
+
+
+
+    /*character page*/
+
+
+    .Characters-inner {
+
+        width: 100%;
+        max-width: 1200px;
+        padding: 12px 12px 24px;
+        flex-direction: row;
+
+    }
+
+    .Character-card {
+        border: none;
+    }
+
+    .Character-card img {
+
+        max-width: 100%;
+        border-radius: 16px;
+        margin-bottom: 0;
+    }
+
+    .Character-info {
+
+        align-items: normal;
+    }
+
+    .Character-info>div:nth-child(1) {
+
+        border-bottom: 1px solid var(--grey);
+        margin: 0 24px;
+    }
+
+    .Character-info h2 {
+        margin: 0;
+    }
+
+
+    .Character-info .info-container {
+        height: 100%;
+        padding: 32px 24px;
+    }
+
+
+    /* Error 404 page */
+
+    .error404-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .error404-img {
+        display: grid;
+
+    }
+
+    .error404-img img {
+        place-self: end;
+        max-width: 94%;
+    }
+
+    .error404-info {
+        justify-content: center;
+        max-width: 80%;
+    }
+
+    .error404-info h2 {
+        text-align: justify;
+    }
+
+
+
+
+
+}
+
+@media (min-width: 1024px) {
+    /* error 404 */
+
+    .error404-info h2 {
+
+        font-size: 5rem;
+
+    }
 }

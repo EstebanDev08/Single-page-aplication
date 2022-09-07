@@ -20,9 +20,6 @@ const router = async () => {
 
 
 
-
-
-
     const header = null || document.getElementById("header");
     const content = null || document.getElementById("content")
     const character = null || document.getElementById("character")
@@ -40,7 +37,6 @@ const router = async () => {
 
 
 
-
     if (route === "/") {
         content.innerHTML = `<div class="Characters" id="character"></div>`
 
@@ -52,8 +48,6 @@ const router = async () => {
         content.innerHTML = await render();
 
     }
-
-
 
 
 };
