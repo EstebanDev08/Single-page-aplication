@@ -1,5 +1,5 @@
 import router from './routes/index'
-import { Home, observerScroll } from './pages/Home'
+import observerScroll from "./utils/ObserverScroll"
 
 
 window.addEventListener('load', router);

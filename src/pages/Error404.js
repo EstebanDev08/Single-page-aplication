@@ -1,4 +1,7 @@
 const Character = () => {
+
+
+
     const view = /*html*/ `
 
 <div class="error404-content">

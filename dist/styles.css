@@ -19,9 +19,7 @@
     ;
     --text: 'IBM Plex Sans', sans-serif;
 
-
 }
-
 
 
 html {
@@ -51,16 +49,15 @@ h2 {
     font-family: var(--tittles);
     font-weight: 700;
 
-
 }
-
-
-
 
 #content {
     display: flex;
-    justify-content: center;
     margin-bottom: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
 }
 
 .button-principal {
@@ -82,7 +79,6 @@ h2 {
 }
 
 
-
 /*header page*/
 
 header {
@@ -100,7 +96,7 @@ header {
 }
 
 .Header-logo img {
-    width: 70%;
+    width: 140px;
 }
 
 .Header-navbar {
@@ -116,10 +112,42 @@ header {
 
 .search-icon {
 
-    height: 36px;
-    width: 36px;
+    height: 28px;
+    width: 28px;
+    margin: 4px;
 
 }
+
+.formSearch {
+
+
+    display: flex;
+
+
+    background-color: #cfcfcf83;
+
+    border: 1px solid black;
+    align-items: center;
+    border-radius: 8px;
+
+    box-shadow: 0 0 4px 0 black;
+
+
+}
+
+.formSearch .inpSearch {
+    background-color: transparent;
+    border: none;
+    height: 28px;
+    padding-left: 4px;
+
+    outline: none;
+
+    width: 100%;
+
+}
+
+
 
 
 /* Home */
@@ -140,8 +168,6 @@ header {
     width: 100%;
     max-width: 400px;
 
-
-
 }
 
 .Characters .Character-item a {
@@ -161,8 +187,6 @@ header {
 
 }
 
-
-
 .Characters .Character-item div {
     position: absolute;
     bottom: 3px;
@@ -176,8 +200,6 @@ header {
 
     background-color: var(--terciario);
 
-
-
 }
 
 .Characters .Character-item div h2 {
@@ -188,8 +210,6 @@ header {
     overflow: hidden;
 
 }
-
-
 
 
 
@@ -248,10 +268,8 @@ header {
 
 .Character-card div {
 
-
     position: absolute;
     top: -55px;
-
 
     display: flex;
     align-items: center;
@@ -263,15 +281,10 @@ header {
     max-width: 84%;
 
     background-color: #50BCF2;
-
     border-radius: 18px 0;
-
     box-shadow: 0px 0px 7px 0px var(--grey);
 
-
 }
-
-
 
 .Character-card img {
     width: 100%;
@@ -306,7 +319,6 @@ header {
     max-width: 500px;
 }
 
-
 .Character-info h3 {
 
     margin-bottom: 6px;
@@ -316,8 +328,6 @@ header {
     grid-template-columns: 140px 1fr;
     font-weight: 700;
     letter-spacing: 0.1rem;
-
-
 
 }
 
@@ -336,9 +346,6 @@ header {
     left: calc(50% - 60px);
     margin: 0 auto;
 
-
-
-
 }
 
 
@@ -350,7 +357,6 @@ header {
     width: 100%;
 
     display: grid;
-
 
 }
 
@@ -397,8 +403,6 @@ header {
 
 footer {
 
-
-
     height: 24px;
     width: 100%;
 
@@ -415,10 +419,7 @@ footer {
 
 @media (min-width: 820px) {
 
-
-
     /*character page*/
-
 
     .Characters-inner {
 
@@ -487,11 +488,8 @@ footer {
         text-align: justify;
     }
 
-
-
-
-
 }
+
 
 @media (min-width: 1024px) {
     /* error 404 */
@@ -501,4 +499,8 @@ footer {
         font-size: 5rem;
 
     }
+}
+
+.inactive {
+    display: none;
 }

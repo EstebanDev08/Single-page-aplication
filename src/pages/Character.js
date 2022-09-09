@@ -3,9 +3,10 @@ import getHash from "../utils/getHash";
 
 const Character = async () => {
     const characterId = getHash();
-
     const character = await getData({ id: characterId });
 
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 
 
     const view = /*html*/ `
