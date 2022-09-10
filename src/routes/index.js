@@ -5,9 +5,12 @@ import Error404 from '../pages/Error404'
 import getHash from '../utils/getHash'
 import resolveRoutes from '../utils/resolveRoutes'
 import { Search } from '../pages/Search'
+import Filters from '../tamplate/Filters'
 
 
 const router = async () => {
+
+
 
 
 
@@ -17,9 +20,10 @@ const router = async () => {
     const characterCard = null || document.querySelector(".Characters-inner")
     const error404page = null || document.querySelector(".error404-content")
     const searchContent = null || document.getElementById("contentSearch")
-
+    const filstesContainer = document.querySelector("#filters")
 
     await Header();
+    Filters();
 
 
     let hash = getHash();
@@ -36,6 +40,7 @@ const router = async () => {
 
         searchContent ? searchContent.classList.add("inactive") : console.log("")
 
+        filstesContainer.classList.add("inactive")
 
         await Home();
 
@@ -46,8 +51,8 @@ const router = async () => {
 
         searchContent ? searchContent.classList.add("inactive") : console.log("")
 
-
-        content.innerHTML += await Character();
+        filstesContainer.classList.add("inactive")
+        await Character();
 
 
     } else if (route === "/search") {
@@ -58,11 +63,11 @@ const router = async () => {
 
         searchContent ? searchContent.classList.remove("inactive") : console.log("")
 
-
+        filstesContainer.classList.remove("inactive")
         Search();
 
     } else {
-
+        filstesContainer.classList.add("inactive")
         characterContent ? characterContent.classList.add("inactive") : console.log("")
         characterCard ? characterCard.remove() : console.log()
 

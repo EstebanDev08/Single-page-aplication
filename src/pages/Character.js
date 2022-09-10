@@ -2,6 +2,10 @@ import getData from "../utils/getData";
 import getHash from "../utils/getHash";
 
 const Character = async () => {
+
+    const content = null || document.getElementById("content")
+
+
     const characterId = getHash();
     const character = await getData({ id: characterId });
 
@@ -9,7 +13,7 @@ const Character = async () => {
     document.documentElement.scrollTop = 0;
 
 
-    const view = /*html*/ `
+    const view = `
 
 <div class="Characters-inner">
 
@@ -33,7 +37,7 @@ const Character = async () => {
        </div> 
     </article>
 
-    <a href="/">
+    <a>
     <div class="button-principal character-button">
         <h3>BACK</h3>
     </div>
@@ -41,9 +45,20 @@ const Character = async () => {
 </div>
 
 `;
-    return view
+
+    content.innerHTML += view;
+
+
+    const btnCharacter = document.querySelector(".character-button")
+
+    btnCharacter.addEventListener("click", () => {
+
+        history.back()
+
+    })
+
+
 
 };
-
 
 export default Character

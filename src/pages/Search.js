@@ -6,16 +6,15 @@ const Search = async () => {
     const txtBusqueda = getHashSearch();
 
     const searchContainer = document.getElementById("contentSearch")
+    searchContainer.innerHTML = ""
 
     if (searchContainer.innerHTML === "") {
-
-
 
         try {
 
             const characters = await getData({ prm: `name=${txtBusqueda}` });
 
-            console.log(characters)
+
 
             let page = `
             
@@ -41,6 +40,7 @@ const Search = async () => {
 
 
     }
+
 
 };
 
